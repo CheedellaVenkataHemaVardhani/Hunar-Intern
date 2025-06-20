@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Course Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #004080;
+      color: white;
+    }
+
+    nav {
+      background: #222;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    nav a {
+      display: inline-block;
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .section {
+      display: none;
+      padding: 40px 20px;
+    }
+
+    .box {
+      background-color: white;
+      max-width: 700px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    #home { background-color: #e3f2fd; }
+    #about { background-color: #fffde7; }
+    #courses { background-color: #e0f2f1; }
+    #contact { background-color: #fce4ec; }
+    #register { background-color: #e8f5e9; }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #0066cc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Online Course Website</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('about')">About</a>
+    <a href="#" onclick="showSection('courses')">Courses</a>
+    <a href="#" onclick="showSection('register')">Register</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <!-- Home Section -->
+  <div id="home" class="section" style="display:block;">
+    <div class="box">
+      <h2>Welcome to Our Learning Platform</h2>
+      <p>Discover a wide range of expertly crafted online courses designed to help you grow your skills and advance your career. Whether you're a student, professional, or enthusiast — we have something for you.</p>
+      <p>📚 Courses in Web Development, Programming, python, Java, and more.</p>
+      <p>🧑‍🏫 Get guidance from experienced instructors and industry experts.</p>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div id="about" class="section">
+    <div class="box">
+      <h2>About Us</h2>
+      <p> We provide highly-quality online courses in various fields including:</p>
+	  <p>->Web Development</p>
+	  <p>->Python</p>
+          <p>->Java</p>
+       
+    </div>
+  </div>
+
+  <!-- Courses Section -->
+  <div id="courses" class="section">
+    <div class="box">
+      <h2>Available Courses</h2>
+      <ul>
+        <li>HTML & CSS Fundamentals</li>
+        <li>JavaScript Basics</li>
+        <li>Python for Beginners</li>
+        <li>Java Basics</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Register Section -->
+  <div id="register" class="section">
+    <div class="box">
+      <h2>Course Registration</h2>
+      <form>
+        <label>Full Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Email Address:</label>
+        <input type="email" name="email" required>
+
+        <label>Select Course:</label>
+        <select name="course" required>
+          <option value="">--Choose a Course--</option>
+          <option>HTML & CSS Fundamentals</option>
+          <option>JavaScript Basics</option>
+          <option>Python for Beginners</option>
+          <option>Java Basics</option>
+        </select>
+
+        <button type="submit">Submit Registration</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact" class="section">
+    <div class="box">
+      <h2>Contact Us</h2>
+      <form>
+        <label>Your Name:</label>
+        <input type="text" name="contact-name" required>
+
+        <label>Your Email:</label>
+        <input type="email" name="contact-email" required>
+
+        <label>Message:</label>
+        <textarea rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    function showSection(sectionId) {
+      const sections = document.getElementsByClassName('section');
+      for (let i = 0; i < sections.length; i++) {
+        sections[i].style.display = "none";
+      }
+      document.getElementById(sectionId).style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
